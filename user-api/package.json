@@ -1,0 +1,35 @@
+{
+  "name": "learniq-api",
+  "version": "1.0.0",
+  "description": "LearnIQ Backend API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2",
+    "bcryptjs": "^3.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.5.0",
+    "cors": "^2.8.5",
+    "helmet": "^8.1.0",
+    "express-rate-limit": "^7.5.0",
+    "axios": "^1.6.0"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "api",
+    "learniq"
+  ],
+  "author": "LearnIQ Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
