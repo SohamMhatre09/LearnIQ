@@ -1,0 +1,159 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    /* Primary Yellow from Landing Page */
+    --primary: 45 93% 47%;
+    --primary-foreground: 0 0% 0%;
+
+    /* Secondary Blue */
+    --secondary: 213 90% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent Yellow (lighter) */
+    --accent: 48 100% 67%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 32% 91%;
+    --border-light: 214 32% 96%;
+    --border-dark: 214 32% 86%;
+    --input: 214 32% 91%;
+    --ring: 45 93% 47%;
+
+    --radius-lg: 0rem;
+    --radius-md: 0rem;
+    --radius-sm: 0rem;
+
+    --editor-background: 0 0% 96%;
+    --editor-foreground: 0 0% 7%;
+    --editor-line: 0 0% 85%;
+
+    --difficulty-beginner: 120 100% 40%;
+    --difficulty-intermediate: 35 100% 50%;
+    --difficulty-advanced: 0 100% 50%;
+
+    /* Custom Brand Colors */
+    --brand-yellow: 45 93% 47%;
+    --brand-yellow-light: 48 100% 67%;
+    --brand-yellow-dark: 43 89% 38%;
+    --brand-blue: 213 90% 50%;
+    --brand-blue-light: 213 90% 60%;
+    --brand-blue-dark: 213 90% 40%;
+    --brand-black: 0 0% 0%;
+    --brand-white: 0 0% 100%;
+  }
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary Yellow (same in dark mode) */
+    --primary: 45 93% 47%;
+    --primary-foreground: 0 0% 0%;
+
+    /* Secondary Blue (adjusted for dark mode) */
+    --secondary: 213 90% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 217 20% 65%;
+
+    /* Accent Yellow (same in dark mode) */
+    --accent: 48 100% 67%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 18%;
+    --border-light: 0 0% 22%;
+    --border-dark: 0 0% 14%;
+    --input: 0 0% 18%;
+    --ring: 45 93% 47%;
+
+    --editor-background: 0 0% 10%;
+    --editor-foreground: 0 0% 98%;
+    --editor-line: 0 0% 20%;
+
+    /* Custom Brand Colors (consistent in dark mode) */
+    --brand-yellow: 45 93% 47%;
+    --brand-yellow-light: 48 100% 67%;
+    --brand-yellow-dark: 43 89% 38%;
+    --brand-blue: 213 90% 55%;
+    --brand-blue-light: 213 90% 65%;
+    --brand-blue-dark: 213 90% 45%;
+    --brand-black: 0 0% 0%;
+    --brand-white: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body, #root {
+    @apply h-full;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass {
+    @apply bg-background/50 backdrop-blur-lg border border-border-light shadow-glass;
+  }
+  
+  .dark .glass {
+    @apply bg-card/50;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .code-font {
+    font-family: 'SF Mono', SFMono-Regular, ui-monospace, 'Cascadia Mono', 'Segoe UI Mono',
+    'Liberation Mono', Menlo, Monaco, Consolas, monospace;
+  }
+  
+  .animate-hover {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}

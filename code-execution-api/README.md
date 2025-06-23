@@ -1,0 +1,1 @@
+pyinstaller --onefile --uac-admin --name "Code_Execution_API_Installer" code_execution_api_installer.py
