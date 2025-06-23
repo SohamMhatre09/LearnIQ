@@ -8,7 +8,7 @@ import path from 'path';
 // Load environment variables
 dotenv.config();
 
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:5000';
+const BACKEND_URL = process.env.BACKEND_URL || 'https://learniq.handjobs.co.in';
 console.log(`Using backend URL: ${BACKEND_URL}`);
 
 // Global variables to store data across tests

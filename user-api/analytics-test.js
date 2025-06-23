@@ -11,7 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // API base URL
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://learniq.handjobs.co.in/api';
 
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 

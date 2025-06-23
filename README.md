@@ -77,7 +77,7 @@ cd user-api
 node index.js
 ```
 
-> ✅ Server will run on `http://localhost:5000`
+> ✅ Server will run on `https://learniq.handjobs.co.in`
 
 ### 2. Start Frontend Dev Server
 
